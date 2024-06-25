@@ -1,7 +1,13 @@
 {
+  "name": "rag",
+  "version": "1.0.0",
+  "type": "commonjs",
   "dependencies": {
+    "@langchain/google-genai": "^0.0.21",
+    "@langchain/openai": "^0.2.0",
+    "@pinecone-database/pinecone": "^2.2.2",
     "dotenv": "^16.4.5",
     "langchain": "^0.2.7",
-    "pinecone": "^0.1.0"
+    "openai": "^4.52.0"
   }
 }
