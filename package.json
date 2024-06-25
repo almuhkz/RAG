@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "langchain": "^0.2.7",
+    "pinecone": "^0.1.0"
+  }
+}
