@@ -10,7 +10,21 @@ let { ChatGoogleGenerativeAI } = require("@langchain/google-genai");
 
 
 async function main() {
-    const schedule = ["3/3/2024 6:00 AM - Wake Up", "3/3/2024 7:00 AM - Eat Breakfast", "3/3/2024 8:00 AM - Surrender to Canada", "3/3/2024 12:00 PM - Eat Lunch", "3/3/2024 5:00 PM - Go Home", "3/3/2024 6:00 PM - Eat Dinner", "3/3/2024 7:00 PM - Go to Sleep", "3/3/2024 8:00 PM - Dream"];
+    const schedule = [
+        "3/3/2024 6:00 AM - Wake Up",
+        "3/3/2024 7:00 AM - Eat Breakfast",
+        "3/3/2024 8:00 AM - Go to Incubator",
+        "3/3/2024 10:00 AM - Work on Project",
+        "3/3/2024 12:00 PM - Eat Lunch at McDonalds",
+        "3/3/2024 1:00 PM - Go to UniHub",
+        "3/3/2024 2:00 PM - Meet with Team",
+        "3/3/2024 3:00 PM - Greet Alidar Panaguzhiyev",
+        "3/3/2024 4:00 PM - Continue Working on Project",
+        "3/3/2024 5:00 PM - Go Home",
+        "3/3/2024 6:00 PM - Eat Dinner",
+        "3/3/2024 7:00 PM - Relax",
+        "3/3/2024 8:00 PM - Plan Next Day"
+    ];
 
 
     const openai = new OpenAI({
@@ -44,7 +58,7 @@ async function main() {
 
     await index.upsert(scheduleVectors);
 
-    const query = "when do I plan to prostrate myself for our northern neighbor?";
+    const query = "when i will greet the legend Alidar?";
 
     const queryEmbedding = await new GoogleGenerativeAIEmbeddings().embedQuery(query);
 
